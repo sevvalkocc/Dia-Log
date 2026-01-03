@@ -41,15 +41,25 @@ env/
 .mypy_cache/
 .ruff_cache/
 
-# (Eğer model/data local tutulacaksa)
+# =========================
+# Local data / models (keep out of git)
+# =========================
 models/
 dataset/
 data/raw/
 *.joblib
 *.pkl
 *.parquet
-*.csv
 *.xlsx
+
+# =========================
+# CSV policy
+# =========================
+# Genel olarak tüm CSV'leri ignore et (dataset csv'leri gitmesin diye)
+*.csv
+
+# SADECE bu dosya repo'ya girsin
+!src/assets/template_2day.csv
 
 # =========================
 # OS / IDE
